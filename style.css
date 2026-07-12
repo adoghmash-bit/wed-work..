@@ -1,0 +1,343 @@
+/* إزالة المسافات الافتراضية للمتصفح */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+}
+
+
+/* التخطيط الشبكي للحاوية الكبيرة */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* العمود الأول 250 بكسل، العمود الثاني يأخذ باقي المساحة */
+    min-height: 100vh; /* جعل طول الموقع يأخذ كامل ارتفاع الشاشة */
+}
+
+
+/* تنسيق الشريط الجانبي */
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.sidebar ul {
+    list-style: none;
+}
+
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar ul {
+
+    list-style:none;
+    padding:0;
+
+}
+
+
+.sidebar a {
+
+    display:block;
+
+    padding:12px 20px;
+
+    margin:8px 0;
+
+    color:#333;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:0.3s; /* حركة ناعمة */
+
+}
+
+
+/* تأثير عند مرور الماوس */
+.sidebar a:hover {
+
+    background:#ff0000; /* لون الخلفية */
+
+    color:rgb(7, 7, 7); /* لون النص */
+
+    transform:translateX(10px); /* حركة بسيطة لليمين */
+
+}
+
+
+
+/* الرابط الخاص بالصفحة الحالية */
+.sidebar a.active {
+
+    background:#00192a;
+
+    color:white;
+
+}
+
+
+/* تأثير المرور وتنسيق الصفحة النشطة */
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: #8bee82;
+    color: #000000;
+    padding-right: 15px; /* إزاحة بسيطة لإعطاء حيوية */
+}
+
+
+/* تنسيق المحتوى الرئيسي */
+.main-content {
+    padding: 30px;
+}
+
+
+header {
+    margin-bottom: 30px;
+}
+.card {
+    background:white;
+    padding:20px;
+    border: radius 30px;
+    text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+
+    transition:0.3s;
+}
+
+واجعل حجم النصوص أجمل:
+.stats-grid {
+
+    display:grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-rows: repeat(3, 160px);
+
+    gap:20px;
+
+}
+/* يأخذ عمودين وصفين */
+.big-card {
+
+    grid-column: span 2;
+
+    grid-row: span 2;
+
+}
+
+
+/* يأخذ عمودين وصف واحد */
+.medium-card {
+
+    grid-column: span 2;
+
+}
+header {
+    margin-bottom: 30px;
+}
+
+.card {
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:white;
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+
+    transition:0.3s;
+}
+
+
+.card:hover {
+
+    transform:scale(1.05);
+
+    background:#3498db;
+
+    color:white;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
+}
+.card{
+    background: #fff;
+    color: #000;
+    transition: .3s;
+}
+
+.card:hover{
+    background: #77a9f5; /* الأزرق */
+}
+
+.card:hover *{
+    color: #fff !important;
+}
+.big-card {
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.medium-card {
+    grid-column:span 2;
+}
+/* تقسيم الكروت باستخدام Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+.card h3 {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* ===================== */
+/* تنسيق جدول المستخدمين */
+/* ===================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ================= */
+/* تنسيق النموذج */
+/* ================= */
+
+form {
+    max-width: 500px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+header h1 {
+ text-align: 20px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 16px;
+    width: 100%;
+    background-color: #71bdf1;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+     font-weight: bold;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+
+/* صفحة الرئيسية */
+body.home-page {
+    background-color:#dfe6bb;
+}
+
+
+/* صفحة المستخدمين */
+body.users-page {
+    background-color:#dfe6bb;
+}
+
+
+/* صفحة الإعدادات */
+body.settings-page {
+    background-color:#dfe6bb;
+}
